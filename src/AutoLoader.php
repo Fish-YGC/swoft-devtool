@@ -22,7 +22,7 @@ class AutoLoader extends SwoftComponent
     {
         parent::__construct();
 
-        Swoft::setAlias('@devtool', dirname(__DIR__, 2));
+        Swoft::setAlias('@devtool', dirname(__DIR__));
     }
 
     /**

@@ -31,8 +31,10 @@ class AppController
             'phpVersion'    => \PHP_VERSION,
             'swooleVersion' => \SWOOLE_VERSION,
             'swoftVersion'  => \Swoft::VERSION,
-            'appName'       => \APP_NAME,
-            'basePath'      => \BASE_PATH,
+//            'appName'       => \APP_NAME,
+//            'basePath'      => \BASE_PATH,
+            'appName'       => \config('name'),
+            'basePath'      => alias('basePath'),
         ];
     }
 
