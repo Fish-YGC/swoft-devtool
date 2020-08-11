@@ -106,19 +106,20 @@
   import {getHttpRoutes} from '@/libs/api-services'
 
   function formatStaticRoutes(routes, app) {
-    for (let path in routes) {
-      let val = routes[path]
+    app.staticList = routes
+    // for (let path in routes) {
+    //   let val = routes[path]
 
-      for (let method in val) {
-        let item = {
-          path: path
-        }
+    //   for (let method in val) {
+    //     let item = {
+    //       path: path
+    //     }
 
-        item.method = method
-        item.handler = val[method].handler
-        app.staticList.push(item)
-      }
-    }
+    //     item.method = method
+    //     item.handler = val[method].handler
+    //     app.staticList.push(item)
+    //   }
+    // }
   }
 
   function formatRegularRoutes(routes, app) {
