@@ -14,7 +14,8 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://127.0.0.1:9088',
+        // target: 'http://127.0.0.1:9088',
+        target: 'http://www.xiaoxiao.run:9088',
         pathRewrite: {'^/api': '/__devtool'},
         changeOrigin: true
       }

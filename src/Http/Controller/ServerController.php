@@ -61,7 +61,7 @@ class ServerController
     /**
      * Get php extensions list
      *
-     * @RequestMapping(route="php-exts", method=RequestMethod::GET)
+     * @RequestMapping(route="php-ext", method=RequestMethod::GET)
      * @return array
      */
     public function phpExt(): array

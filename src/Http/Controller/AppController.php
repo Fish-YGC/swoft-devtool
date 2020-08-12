@@ -3,6 +3,7 @@
 namespace Swoft\Devtool\Http\Controller;
 
 use Swoft\Aop\Aop;
+use Swoft\Aop\AspectRegister;
 use Swoft\Bean\BeanFactory;
 use Swoft\Config\Config;
 use Swoft\Devtool\Helper\DevToolHelper;
@@ -180,10 +181,11 @@ class AppController
      */
     public function aopHandles(): array
     {
-        /** @var Aop $aop */
-        $aop = \bean(Aop::class);
-
-        return $aop->getAspects();
+//        /** @var Aop $aop */
+//        $aop = \bean(Aop::class);
+//
+//        return $aop->getAspects();
+        return AspectRegister::getAspects();
     }
 
     /**
@@ -198,7 +200,7 @@ class AppController
     public function httpMiddles(Request $request): array
     {
         /** @var \Swoft\Http\Server\HttpDispatcher $dispatcher */
-        $dispatcher = \bean('serverDispatcher');
+        $dispatcher = \bean('httpDispatcher');
         $middleType = (int)$request->query('type');
 
         // 1: only return user's

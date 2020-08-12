@@ -34,7 +34,8 @@ class RouteController
         }
 
         return [
-            'routes' => $router->getRoutes()
+            'static' => $router->getRoutes(),
+            'regular' => []
         ];
     }
 

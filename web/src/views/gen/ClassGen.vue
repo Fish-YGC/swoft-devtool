@@ -98,9 +98,9 @@
 </template>
 
 <script>
-  import axios from 'axios'
   import * as VCard from 'vuetify/es5/components/VCard'
   import {VForm, VCheckbox, VSelect} from 'vuetify'
+  import {genCreate} from '../../libs/api-services'
 
   export default {
     name: 'class-gen',
@@ -149,11 +149,8 @@
       submit () {
         if (this.$refs.form.validate()) {
           // Native form submission is not yet supported
-          axios.post('/api/submit', {
-            name: this.name,
-            email: this.email,
-            select: this.select,
-            checkbox: this.checkbox
+          genCreate({
+            name: this.name
           })
         }
       },

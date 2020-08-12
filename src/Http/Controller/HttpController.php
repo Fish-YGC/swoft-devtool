@@ -17,13 +17,13 @@ use Throwable;
  */
 class HttpController
 {
-    /**
-     * @RequestMapping("routes", method=RequestMethod::GET)
-     * @param Request $request
-     *
-     * @return array|string
-     * @throws Throwable
-     */
+//    /**
+//     * @RequestMapping("routes", method=RequestMethod::GET)
+//     * @param Request $request
+//     *
+//     * @return array|string
+//     * @throws Throwable
+//     */
     public function routes(Request $request)
     {
         /** @var Router $router */

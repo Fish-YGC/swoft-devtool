@@ -57,7 +57,7 @@ export const getSwooleInfo = () => ajax.get('/server/swoole-info')
 export const getServerEvents = (type = 0) => ajax.get('/server/events?type=' + type)
 
 // get server php ext list
-export const getPhpExtList = () => ajax.get('/server/php-ext-list')
+export const getPhpExtList = () => ajax.get('/server/php-exts')
 
 /*
  * Other
@@ -83,3 +83,9 @@ export const getRpcRoutes = () => ajax.get('/rpc/routes')
 
 // get rpc middles
 export const getRpcMiddles = () => ajax.get('/app/rpc/middles')
+
+/*
+ * gen
+ */
+// submit gen
+export const genCreate = (param) => ajax.post('/gen/create', param)
